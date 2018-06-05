@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1212" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="MainData">
+    <entity name="Day_images" representedClassName="Day_images" syncable="YES" codeGenerationType="class">
+        <attribute name="day_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dm_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Days" representedClassName="Days" syncable="YES" codeGenerationType="class">
+        <attribute name="day_day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="day_month" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day_year" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="images" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Images" syncable="YES"/>
+        <relationship name="moods" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Moods" syncable="YES"/>
+        <relationship name="self_notes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Self_note" syncable="YES"/>
+        <relationship name="tasks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tasks" syncable="YES"/>
+    </entity>
+    <entity name="Images" representedClassName="Images" syncable="YES" codeGenerationType="class">
+        <attribute name="day_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_add_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="image_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Moods" representedClassName="Moods" syncable="YES" codeGenerationType="class">
+        <attribute name="day_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mood" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mood_add_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mood_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Notes" representedClassName="Notes" syncable="YES" codeGenerationType="class">
+        <attribute name="day_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="note_add_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="note_title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Quizzes" representedClassName="Quizzes" syncable="YES" codeGenerationType="class">
+        <attribute name="day_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPassed" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="quiz_add_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quiz_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalQuestions" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Self_note" representedClassName="Self_note" syncable="YES" codeGenerationType="class">
+        <attribute name="day_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sn_add_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sn_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sn_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Tasks" representedClassName="Tasks" syncable="YES" codeGenerationType="class">
+        <attribute name="day_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="task_add_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_completion" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="task_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="task_title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="notes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notes" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Day_images" positionX="-189" positionY="-54" width="128" height="90"/>
+        <element name="Days" positionX="-198" positionY="0" width="128" height="180"/>
+        <element name="Images" positionX="-47" positionY="-207" width="128" height="30"/>
+        <element name="Moods" positionX="-18" positionY="417" width="128" height="105"/>
+        <element name="Notes" positionX="261" positionY="426" width="128" height="120"/>
+        <element name="Quizzes" positionX="-189" positionY="-54" width="128" height="30"/>
+        <element name="Self_note" positionX="-396" positionY="390" width="128" height="105"/>
+        <element name="Tasks" positionX="178" positionY="-126" width="128" height="150"/>
+    </elements>
+</model>
